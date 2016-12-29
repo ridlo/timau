@@ -136,7 +136,7 @@ class AllSkyMap(Basemap):
         return self._limb
 
     def label_meridians(self, lons, fontsize=10, valign='bottom', vnudge=0,
-                        halign='center', hnudge=0):
+                        halign='center', hnudge=0, color='black'):
         """
         Label meridians with their longitude values in degrees.
         
@@ -159,7 +159,7 @@ class AllSkyMap(Basemap):
                 lon_lbl = lon
             pl.text(x, y, angle_symbol(lon_lbl), fontsize=fontsize,
                     verticalalignment=valign,
-                    horizontalalignment=halign)
+                    horizontalalignment=halign,color=color)
 
     def east_hem(self, lon):
         """
